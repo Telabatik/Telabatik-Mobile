@@ -18,7 +18,7 @@
     <string name="history_time">history time</string>
     <string name="history">Histori</string>
     <string name="the_day_batik">Batik of the Day</string>
-    <string name="your_like">May be your like</string>
+    <string name="your_like">Anda mungkin suka</string>
     <string name="batik_info">Info Batik </string>
 
 
@@ -55,5 +55,7 @@
         <string name="Headline">Judul</string>
         <string name="Dekripsion">Deskripsi</string>
     <string name="hello">Hello World!</string>
+    <string name="content_description_more">More</string>
+    <string name="more">More</string>
 
 </resources>
