@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroud_color"
+    android:background="@color/md_theme_background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.home.HomeFragment">
 
@@ -29,7 +29,7 @@
                 android:id="@+id/toptoolbar_home"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/backgroud_color"
+                android:background="@color/md_theme_background"
                 android:elevation="4dp"
                 app:titleTextColor="@android:color/black"
                 android:contentDescription="@string/toptoolbar_home">
@@ -96,7 +96,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginHorizontal="16dp"
-                android:backgroundTint="@color/coklat"
+                android:backgroundTint="@color/md_theme_primary"
                 app:icon="@drawable/ic_scan"
                 app:iconGravity="textStart"
                 app:iconPadding="8dp"

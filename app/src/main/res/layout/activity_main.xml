@@ -26,5 +26,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="labeled"
-        app:itemBackground="@color/putih" />
+        app:itemBackground="@color/white" />
 </androidx.constraintlayout.widget.ConstraintLayout>

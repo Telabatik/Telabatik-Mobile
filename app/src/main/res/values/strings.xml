@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TelaBatik</string>
+    <string name="app_name">Telabatik</string>
 
     <!--content deskription home-->
     <string name="toptoolbar_home">toptoolbar home</string>
@@ -54,5 +54,6 @@
 
         <string name="Headline">Judul</string>
         <string name="Dekripsion">Deskripsi</string>
+    <string name="hello">Hello World!</string>
 
 </resources>

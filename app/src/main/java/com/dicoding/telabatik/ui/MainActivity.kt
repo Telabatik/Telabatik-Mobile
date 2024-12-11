@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //nav color
-        window.navigationBarColor = ContextCompat.getColor(this, R.color.putih)
+        window.navigationBarColor = ContextCompat.getColor(this, R.color.white)
 
         // Set default fragment
         loadFragment(HomeFragment())

@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TelaBatik"
+rootProject.name = "Telabatik"
 include(":app")
  

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroud_color"
+    android:background="@color/md_theme_background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.scan.ResultFragment">
 
@@ -12,7 +12,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/backgroud_color"
+        android:background="@color/md_theme_background"
         android:elevation="4dp"
         app:titleTextColor="@android:color/black"
         android:contentDescription="@string/top_toolbar"
@@ -107,8 +107,8 @@
         app:iconGravity="textStart"
         app:iconPadding="5dp"
         android:text="@string/favorite"
-        android:textColor="@color/putih"
-        android:backgroundTint="@color/coklat"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/md_theme_primary"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/tv_scan_time"
         app:layout_constraintStart_toStartOf="parent"

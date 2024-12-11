@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/backgroud_color"
+    android:background="@color/md_theme_background"
     tools:context=".ui.reference.ReferenceFragment">
 
     <!-- NestedScrollView untuk membuat konten dapat digulir -->
@@ -29,7 +29,7 @@
                 android:id="@+id/toptoolbar_home"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/backgroud_color"
+                android:background="@color/md_theme_background"
                 android:elevation="4dp"
                 app:titleTextColor="@android:color/black"
                 android:contentDescription="@string/toptoolbar_home">
