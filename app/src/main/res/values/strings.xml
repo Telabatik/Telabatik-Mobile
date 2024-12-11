@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">TelaBatik</string>
+
+    <!--content deskription home-->
+    <string name="toptoolbar_home">toptoolbar home</string>
+    <string name="profile_button">Open Profile</string>
+
+    <string name="title_home">awal</string>
+    <string name="title_scan">scan</string>
+    <string name="title_reference">referensi</string>
+    <string name="title_setting">setting</string>
+    <string name="result">Result</string>
+
+    <!--Home String-->
+    <string name="telabatik">Telabatik</string>
+    <string name="username">Hello, John Doe</string>
+    <string name="welcome">Welcome!</string>
+    <string name="history_time">history time</string>
+    <string name="history">Histori</string>
+    <string name="the_day_batik">Batik of the Day</string>
+    <string name="your_like">May be your like</string>
+    <string name="batik_info">Info Batik </string>
+
+
+
+        <!--content deskripsion item history-->
+        <string name="history_image_description">Image of Batik XYZ</string>
+
+            <!--result String/halaman result-->
+            <string name="scaning">Scan</string>
+            <string name="name_result">Name Batik Analisis</string>
+            <string name="history_result">History time analisis</string>
+            <string name="favorite">Favorite</string>
+            <string name="result_deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod... </string>
+            <string name="result_learnmore">Learn More</string>
+            <string name="batik_image">Batik Image</string>
+            <string name="batik_xyz">Batik XYZ</string>
+            <string name="batik_from">Batik from </string>
+
+            <!--content deskripsion result-->
+            <string name="back_button">back</string>
+            <string name="menu_button">menu</string>
+            <string name="top_toolbar">top toolbar</string>
+            <string name="iv_batik">img batik</string>
+
+
+
+    <!--string referensi-->
+    <string name="title_reference_top">Referensi</string>
+    <string name="batik_produk">Produk</string>
+    <string name="learning">Pusat pembelajaran</string>
+    <string name="news">Berita</string>
+    <string name="event">Acara</string>
+
+        <string name="Headline">Judul</string>
+        <string name="Dekripsion">Deskripsi</string>
+
+</resources>

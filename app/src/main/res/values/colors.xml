@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+
+
+    <color name="coklat">#8F4C35</color> <!-- Warna untuk dipilih -->
+    <color name="putih">#FCEAE5</color> <!-- Warna untuk tidak dipilih -->
+    <color name="backgroud_color">#FFF8F6</color>
+
+
+</resources>
