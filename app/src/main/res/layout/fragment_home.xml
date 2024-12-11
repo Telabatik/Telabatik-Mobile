@@ -57,7 +57,7 @@
                 style="@style/TextAppearance.Material3.LabelLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/username"
+                android:text="@string/home_hello"
                 />
 
             <TextView
@@ -65,7 +65,7 @@
                 style="@style/TextAppearance.Material3.HeadlineMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/welcome"
+                android:text="@string/home_welcome"
                 />
 
             <Button
@@ -76,9 +76,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="0dp"
-                android:backgroundTint="@color/md_theme_primary"
-                android:text="@string/scaning"
-                android:textColor="@color/white"
+                android:text="@string/scan_scaning"
                 android:textSize="16sp"
                 app:icon="@drawable/ic_scan"
                 app:iconGravity="textStart"
@@ -97,7 +95,7 @@
                     style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/history" />
+                    android:text="@string/home_history" />
 
                 <ImageButton
                     android:id="@+id/btn_history_title"
@@ -113,8 +111,6 @@
                 android:id="@+id/rv_history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
@@ -125,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="@string/the_day_batik" />
+                android:text="@string/home_otd_heading" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/card_batik_otd"
@@ -143,7 +139,7 @@
                         android:id="@+id/iv_batik_result"
                         android:layout_width="128dp"
                         android:layout_height="128dp"
-                        android:contentDescription="@string/batik_image"
+                        android:contentDescription="@string/img_alt_batik"
                         android:scaleType="centerCrop"
                         app:srcCompat="@drawable/ic_placeholder" />
 
@@ -161,7 +157,7 @@
                             style="@style/TextAppearance.Material3.TitleLarge"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/batik_xyz" />
+                            android:text="@string/result_name_placeholder" />
 
                         <TextView
                             android:id="@+id/tv_batik_description"
@@ -169,7 +165,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="@string/batik_from" />
+                            android:text="@string/result_from_placeholder" />
 
                     </LinearLayout>
 
@@ -193,7 +189,7 @@
                     style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/your_like" />
+                    android:text="@string/home_recommend" />
 
                 <ImageButton
                     android:id="@+id/btn_yourlike_title"
@@ -226,7 +222,7 @@
                     style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/batik_info" />
+                    android:text="@string/home_info" />
 
                 <ImageButton
                     android:id="@+id/btn_batikinfo_title"
@@ -242,8 +238,6 @@
                 android:id="@+id/rv_batikinfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 

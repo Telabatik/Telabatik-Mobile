@@ -37,7 +37,7 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_placeholder"
-            android:contentDescription="@string/history_image_description" />
+            android:contentDescription="@string/img_alt_batik" />
     </androidx.cardview.widget.CardView>
 
     <!-- Title TextView -->
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="@string/batik_xyz"
+        android:text="@string/result_name_placeholder"
         android:textSize="14sp"
         android:textStyle="bold"/>
 
@@ -55,7 +55,7 @@
         android:id="@+id/tv_history_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/history_time"
+        android:text="@string/home_history_time"
         android:textSize="12sp"
         android:textColor="@color/black" />
 </LinearLayout>

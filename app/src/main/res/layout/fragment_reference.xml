@@ -1,23 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/md_theme_background"
-    tools:context=".ui.reference.ReferenceFragment">
 
-    <!-- NestedScrollView untuk membuat konten dapat digulir -->
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            style="@style/Widget.Material3.CollapsingToolbar.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/collapsingToolbarLayoutMediumSize"
+            app:contentScrim="?attr/colorPrimary"
+
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toptoolbar_home"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:menu="@menu/home_menu"
+                app:navigationIcon="@drawable/ic_profile"
+                app:title="@string/ref_home_title"></androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.core.widget.NestedScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-        <!-- LinearLayout untuk menampung semua konten -->
+
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,66 +47,24 @@
             android:paddingBottom="16dp">
 
             <!-- Toolbar -->
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toptoolbar_home"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/md_theme_background"
-                android:elevation="4dp"
-                app:titleTextColor="@android:color/black"
-                android:contentDescription="@string/toptoolbar_home">
-
-                <!-- Left Navigation Button -->
-                <ImageButton
-                    android:id="@+id/btn_profile"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_profile"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="@string/profile_button"
-                    android:layout_gravity="start"
-                    app:tint="@color/black" />
-
-                <!-- Right Menu Button -->
-                <ImageButton
-                    android:id="@+id/btn_menu"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/ic_more_vert"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="@string/menu_button"
-                    android:layout_gravity="end"
-                    app:tint="@android:color/black" />
-            </androidx.appcompat.widget.Toolbar>
 
             <!-- Konten lainnya -->
-            <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/title_reference_top"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp" />
 
             <LinearLayout
                 android:id="@+id/ll_batikinfo_ref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="20dp"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginStart="16dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_batik_info"
+                    style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/batik_info"
-                    android:textSize="22sp"
-                    android:textColor="@color/black"
-                    />
+                    android:text="@string/home_info" />
 
                 <ImageButton
                     android:id="@+id/btn_batikinfo_title"
@@ -101,26 +81,26 @@
                 android:id="@+id/rv_batikinfo_ref"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="vertical"
                 android:layout_margin="16dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                />
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
 
-                android:layout_marginStart="16dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_batikproduk"
+                    style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/batik_produk"
-                    android:textSize="22sp"
-                    android:textColor="@color/black" />
+                    android:text="@string/ref_home_products"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
 
                 <ImageButton
                     android:id="@+id/btn_produk_title"
@@ -137,26 +117,24 @@
                 android:id="@+id/rv_batikproduk_ref"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="vertical"
                 android:layout_margin="16dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                />
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
 
-                android:layout_marginStart="16dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_pusatpembelajaran_ref"
+                    style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/learning"
-                    android:textSize="22sp"
-                    android:textColor="@color/black" />
+                    android:text="@string/ref_home_center" />
 
                 <ImageButton
                     android:id="@+id/btn_pusatpembelajaran_ref"
@@ -173,26 +151,24 @@
                 android:id="@+id/rv_pusatpembelajaran"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="horizontal"
                 android:layout_margin="16dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                />
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
 
-                android:layout_marginStart="16dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_berita_ref"
+                    style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/news"
-                    android:textSize="22sp"
-                    android:textColor="@color/black" />
+                    android:text="@string/ref_home_news" />
 
                 <ImageButton
                     android:id="@+id/btn_berita_ref"
@@ -209,26 +185,24 @@
                 android:id="@+id/rv_berita_ref"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="horizontal"
                 android:layout_margin="16dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                />
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
 
-                android:layout_marginStart="16dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_acara_ref"
+                    style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/event"
-                    android:textSize="22sp"
-                    android:textColor="@color/black" />
+                    android:text="@string/ref_home_event" />
 
                 <ImageButton
                     android:id="@+id/btn_acara_ref"
@@ -245,14 +219,13 @@
                 android:id="@+id/rv_acara_ref"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="horizontal"
                 android:layout_margin="16dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                />
-
-
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

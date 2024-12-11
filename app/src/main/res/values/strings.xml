@@ -5,55 +5,49 @@
     <string name="toptoolbar_home">toptoolbar home</string>
     <string name="profile_button">Open Profile</string>
 
-    <string name="title_home">awal</string>
-    <string name="title_scan">scan</string>
-    <string name="title_reference">referensi</string>
-    <string name="title_setting">setting</string>
-    <string name="result">Result</string>
+    <string name="title_home">Awal</string>
+    <string name="title_scan">Scan</string>
+    <string name="title_reference">Referensi</string>
+    <string name="title_setting">Pengaturan</string>
+    <string name="result">Hasil</string>
 
     <!--Home String-->
     <string name="telabatik">Telabatik</string>
-    <string name="username">Hello, John Doe</string>
-    <string name="welcome">Welcome!</string>
-    <string name="history_time">history time</string>
-    <string name="history">Histori</string>
-    <string name="the_day_batik">Batik of the Day</string>
-    <string name="your_like">Anda mungkin suka</string>
-    <string name="batik_info">Info Batik </string>
+    <string name="home_hello">Hello, John Doe</string>
+    <string name="home_welcome">Welcome!</string>
+    <string name="home_history_time">history time</string>
+    <string name="home_history">Histori</string>
+    <string name="home_otd_heading">Batik of the Day</string>
+    <string name="home_recommend">Anda mungkin suka</string>
+    <string name="home_info">Info Batik</string>
 
+    <string name="img_alt_batik">Batik Image</string>
 
+    <!--result String/halaman result-->
+    <string name="scan_scaning">Scan</string>
+    <string name="result_name">Name Batik Analisis</string>
+    <string name="result_history">History time analisis</string>
+    <string name="result_favorite">Favorite</string>
+    <string name="result_deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod... </string>
+    <string name="result_learnmore">Learn More</string>
+    <string name="result_name_placeholder">Batik XYZ</string>
+    <string name="result_from_placeholder">Batik from </string>
 
-        <!--content deskripsion item history-->
-        <string name="history_image_description">Image of Batik XYZ</string>
-
-            <!--result String/halaman result-->
-            <string name="scaning">Scan</string>
-            <string name="name_result">Name Batik Analisis</string>
-            <string name="history_result">History time analisis</string>
-            <string name="favorite">Favorite</string>
-            <string name="result_deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod... </string>
-            <string name="result_learnmore">Learn More</string>
-            <string name="batik_image">Batik Image</string>
-            <string name="batik_xyz">Batik XYZ</string>
-            <string name="batik_from">Batik from </string>
-
-            <!--content deskripsion result-->
-            <string name="back_button">back</string>
-            <string name="menu_button">menu</string>
-            <string name="top_toolbar">top toolbar</string>
-            <string name="iv_batik">img batik</string>
-
+    <!--content deskripsion result-->
+    <string name="back_button">back</string>
+    <string name="menu_button">menu</string>
+    <string name="top_toolbar">top toolbar</string>
 
 
     <!--string referensi-->
-    <string name="title_reference_top">Referensi</string>
-    <string name="batik_produk">Produk</string>
-    <string name="learning">Pusat pembelajaran</string>
-    <string name="news">Berita</string>
-    <string name="event">Acara</string>
+    <string name="ref_home_title">Referensi</string>
+    <string name="ref_home_products">Produk</string>
+    <string name="ref_home_center">Pusat Pembelajaran</string>
+    <string name="ref_home_news">Berita</string>
+    <string name="ref_home_event">Acara</string>
 
-        <string name="Headline">Judul</string>
-        <string name="Dekripsion">Deskripsi</string>
+    <string name="headline">Judul</string>
+    <string name="description">Deskripsi</string>
     <string name="hello">Hello World!</string>
     <string name="content_description_more">More</string>
     <string name="more">More</string>

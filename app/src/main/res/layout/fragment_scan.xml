@@ -40,7 +40,7 @@
         app:icon="@drawable/ic_scan"
         app:iconGravity="textStart"
         app:iconPadding="8dp"
-        android:text="@string/scaning"
+        android:text="@string/scan_scaning"
         android:textColor="@color/white"
         app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
