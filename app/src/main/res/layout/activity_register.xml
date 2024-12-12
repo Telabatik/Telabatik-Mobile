@@ -45,7 +45,10 @@
                     style="?attr/textInputFilledStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/auth_username" />
+                    android:hint="@string/auth_username"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -57,7 +60,10 @@
                     style="?attr/textInputFilledStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/auth_email" />
+                    android:hint="@string/auth_email"
+                    android:inputType="text|textEmailAddress"
+                    android:lines="1"
+                    android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -69,7 +75,10 @@
                     style="?attr/textInputFilledStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/auth_password" />
+                    android:hint="@string/auth_password"
+                    android:inputType="text|textPassword"
+                    android:maxLines="1"
+                    android:password="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

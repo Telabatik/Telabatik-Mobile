@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="@string/result"></androidx.appcompat.widget.Toolbar>
+            app:title="@string/batik_info_heading"></androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -34,21 +34,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/iv_batik2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:contentDescription="@string/img_alt_batik"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_placeholder" />
-
             <TextView
                 android:id="@+id/tv_batik_name2"
                 style="@style/TextAppearance.Material3.HeadlineSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/result_name" />
 
@@ -62,6 +54,16 @@
                 android:layout_marginEnd="16dp"
                 android:text="@string/result_history"
                 android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_batik2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/img_alt_batik"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder" />
 
             <Button
                 android:id="@+id/btn_settings_logout"
@@ -84,34 +86,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/result_deskripsi"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/tv_learn_more2"
-                style="@style/TextAppearance.Material3.TitleLarge"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/result_learnmore" />
-
-            <com.dicoding.telabatik.view.components.HorizontalReferenceItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                app:descriptionText="@string/item_description_placeholder"
-                app:imageResource="@drawable/ic_placeholder"
-                app:titleText="@string/item_title_placeholder"
-                android:id="@+id/hri_result_learn_more"
-                />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

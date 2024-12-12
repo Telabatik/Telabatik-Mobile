@@ -13,6 +13,7 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.dicoding.telabatik.data.api.BatikInfo
 import com.dicoding.telabatik.data.api.PredictData
 import com.dicoding.telabatik.databinding.ItemReferensiVertBinding
 import com.dicoding.telabatik.getRelativeTimeString
@@ -21,7 +22,7 @@ import com.dicoding.telabatik.view.result.ResultActivity
 import java.text.SimpleDateFormat
 
 
-class HistoryAdapter : ListAdapter<PredictData, HistoryAdapter.MyViewHolder>(DIFF_CALLBACK) {
+class BatikInfoAdapter : ListAdapter<BatikInfo, BatikInfoAdapter.MyViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding = ItemReferensiVertBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -34,13 +35,11 @@ class HistoryAdapter : ListAdapter<PredictData, HistoryAdapter.MyViewHolder>(DIF
     }
 
     class MyViewHolder(private val binding: ItemReferensiVertBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(predictData: PredictData){
-            binding.tvItemVertTitle.text = predictData.label
-//            val date = SimpleDateFormat iso8601
-            val date = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse(predictData.predictedAt)
-            binding.tvItemVertDescription.text = getRelativeTimeString(date)
+        fun bind(predictData: BatikInfo){
+            binding.tvItemVertTitle.text = predictData.name
+            binding.tvItemVertDescription.text = "Batik dari Indonesia"
             Glide.with(itemView.context)
-                .load(predictData.imageUrl)
+                .load(predictData.image)
                 .listener(object : RequestListener<Drawable> {
                     override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>, isFirstResource: Boolean): Boolean {
 //                        binding.progressBarItem.visibility = View.GONE
@@ -62,7 +61,7 @@ class HistoryAdapter : ListAdapter<PredictData, HistoryAdapter.MyViewHolder>(DIF
 
             binding.root.setOnClickListener {
                 val context = itemView.context
-                val intent = Intent(context, ResultActivity::class.java)
+                val intent = Intent(context, BatikInfoActivity::class.java)
                 intent.putExtra(ResultActivity.EXTRA_PREDICT_DATA, predictData)
 
                 context.startActivity(intent)
@@ -77,12 +76,12 @@ class HistoryAdapter : ListAdapter<PredictData, HistoryAdapter.MyViewHolder>(DIF
 
 
     companion object {
-        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<PredictData>() {
-            override fun areItemsTheSame(oldItem: PredictData, newItem: PredictData): Boolean {
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<BatikInfo>() {
+            override fun areItemsTheSame(oldItem: BatikInfo, newItem: BatikInfo): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areContentsTheSame(oldItem: PredictData, newItem: PredictData): Boolean {
+            override fun areContentsTheSame(oldItem: BatikInfo, newItem: BatikInfo): Boolean {
                 return oldItem == newItem
             }
         }

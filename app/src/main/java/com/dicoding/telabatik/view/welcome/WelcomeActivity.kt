@@ -31,12 +31,12 @@ class WelcomeActivity : AppCompatActivity() {
 
         binding.btnWelcomeLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+//            finish()
         }
 
         binding.btnWelcomeRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
-            finish()
+//            finish()
         }
     }
 }

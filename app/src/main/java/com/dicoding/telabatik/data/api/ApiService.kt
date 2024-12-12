@@ -1,7 +1,6 @@
 package com.dicoding.telabatik.data.api
 
 import okhttp3.MultipartBody
-import okhttp3.RequestBody
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -11,17 +10,26 @@ import retrofit2.http.Part
 
 interface ApiService {
     @FormUrlEncoded
-    @POST("register")
+    @POST("/auth/register")
     suspend fun register(
-        @Field("name") name: String,
+        @Field("username") name: String,
         @Field("email") email: String,
         @Field("password") password: String
-    ): StatusResponse
+    ): RegisterResponse
 
     @FormUrlEncoded
-    @POST("login")
+    @POST("/auth/login")
     suspend fun login(
-        @Field("email") email: String,
+        @Field("username") email: String,
         @Field("password") password: String
-    ): LoginResponse
+    ): LoginResponse2
+
+    @Multipart
+    @POST("predict")
+    suspend fun predict(
+        @Part image: MultipartBody.Part,
+    ): PredictResponse
+
+    @GET("predict/history")
+    suspend fun getPredictionHistory(): PredictHistoryResponse
 }

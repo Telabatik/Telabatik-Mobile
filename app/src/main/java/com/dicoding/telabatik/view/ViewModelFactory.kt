@@ -5,9 +5,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.telabatik.data.MainRepository
 import com.dicoding.telabatik.di.Injection
+import com.dicoding.telabatik.ui.home.HomeViewModel
+import com.dicoding.telabatik.ui.scan.ScanViewModel
 import com.dicoding.telabatik.view.login.LoginViewModel
 import com.dicoding.telabatik.view.splash.SplashViewModel
 import com.dicoding.telabatik.view.register.RegisterViewModel
+import com.dicoding.telabatik.view.result.BatikInfoViewModel
+import com.dicoding.telabatik.view.result.ResultViewModel
+import com.dicoding.telabatik.view.settings.SettingsViewModel
 
 class ViewModelFactory(private val repository: MainRepository) : ViewModelProvider.NewInstanceFactory() {
 
@@ -23,6 +28,22 @@ class ViewModelFactory(private val repository: MainRepository) : ViewModelProvid
             modelClass.isAssignableFrom(SplashViewModel::class.java) -> {
                 SplashViewModel(repository) as T
             }
+            modelClass.isAssignableFrom(SettingsViewModel::class.java) -> {
+                SettingsViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(ScanViewModel::class.java) -> {
+                ScanViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(ResultViewModel::class.java) -> {
+                ResultViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(BatikInfoViewModel::class.java) -> {
+                BatikInfoViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(HomeViewModel::class.java) -> {
+                HomeViewModel(repository) as T
+            }
+
 
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

@@ -14,6 +14,7 @@
     <!--Home String-->
     <string name="telabatik">Telabatik</string>
     <string name="home_hello">Hello, John Doe</string>
+    <string name="home_hello_name">Hello, %1$s</string>
     <string name="home_welcome">Welcome!</string>
     <string name="home_history_time">history time</string>
     <string name="home_history_heading">Histori</string>
@@ -29,7 +30,7 @@
     <string name="result_history">History time analisis</string>
     <string name="result_favorite">Favorite</string>
     <string name="result_deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod... </string>
-    <string name="result_learnmore">Learn More</string>
+    <string name="result_learnmore">Pelajari lebih lanjut</string>
     <string name="item_title_placeholder">Batik XYZ</string>
     <string name="item_description_placeholder">Batik from ABC</string>
 
@@ -57,5 +58,8 @@
     <string name="auth_email">Email</string>
     <string name="register_register">Daftar</string>
     <string name="register_heading">Daftar</string>
+    <string name="settings_logout">Keluar</string>
+    <string name="settings_header">Pengaturan</string>
+    <string name="batik_info_heading">Info Batik</string>
 
 </resources>

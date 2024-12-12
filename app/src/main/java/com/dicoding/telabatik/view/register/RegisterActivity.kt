@@ -63,9 +63,9 @@ class RegisterActivity : AppCompatActivity() {
                 binding.edRegisterPassword.text.toString()
             ).observe(this) { result ->
                 when (result) {
-//                    is ResultState.Loading -> {
-//                        showLoading(true)
-//                    }
+                    is ResultState.Loading -> {
+                        showLoading(true)
+                    }
 
                     is ResultState.Success -> {
                         showToast(result.data.message)
@@ -73,10 +73,10 @@ class RegisterActivity : AppCompatActivity() {
                         finish()
                     }
 
-//                    is ResultState.Error -> {
-//                        showToast(result.error)
-//                        showLoading(false)
-//                    }
+                    is ResultState.Error -> {
+                        showToast(result.error)
+                        showLoading(false)
+                    }
                 }
             }
         }

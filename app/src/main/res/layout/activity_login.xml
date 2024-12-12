@@ -45,7 +45,10 @@
                     style="?attr/textInputFilledStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/auth_username" />
+                    android:hint="@string/auth_username"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -57,7 +60,10 @@
                     style="?attr/textInputFilledStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/auth_password" />
+                    android:hint="@string/auth_password"
+                    android:inputType="text|textPassword"
+                    android:lines="1"
+                    android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -75,7 +81,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="atau"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/btn_login_google"
@@ -83,7 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="Masuk dengan Google" />
+                android:text="Masuk dengan Google"
+                android:visibility="gone" />
 
         </LinearLayout>
     </ScrollView>

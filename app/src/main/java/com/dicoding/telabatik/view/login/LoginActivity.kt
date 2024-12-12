@@ -49,13 +49,13 @@ class LoginActivity : AppCompatActivity() {
             ).observe(this) {result ->
                 if (result != null) {
                     when (result) {
-//                        is ResultState.Loading -> {
-//                            showLoading(true)
-//                        }
+                        is ResultState.Loading -> {
+                            showLoading(true)
+                        }
 
                         is ResultState.Success -> {
                             showToast(result.data.message)
-                            viewModel.saveSession(result.data.loginResult.userId, result.data.loginResult.token)
+                            viewModel.saveSession(result.data.data.email, result.data.data.username, result.data.data.token)
                             ViewModelFactory.resetInstance()
                             val intent = Intent(this, MainActivity::class.java)
                             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
@@ -64,10 +64,10 @@ class LoginActivity : AppCompatActivity() {
                             finish()
                         }
 
-//                        is ResultState.Error -> {
-//                            showToast(result.error)
-//                            showLoading(false)
-//                        }
+                        is ResultState.Error -> {
+                            showToast(result.error)
+                            showLoading(false)
+                        }
                     }
                 }}
         }

@@ -20,8 +20,14 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import com.dicoding.telabatik.R
+import androidx.fragment.app.viewModels
+import com.dicoding.telabatik.data.ResultState
 import com.dicoding.telabatik.databinding.FragmentScanBinding
+import com.dicoding.telabatik.view.ViewModelFactory
+import com.dicoding.telabatik.view.result.BatikInfoActivity
+import com.dicoding.telabatik.view.result.BatikInfoActivity.Companion.EXTRA_BATIK_INFO
+import com.dicoding.telabatik.view.result.ResultActivity
+import com.dicoding.telabatik.view.result.ResultActivity.Companion.EXTRA_PREDICT_DATA
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -31,6 +37,9 @@ import java.util.Locale
 class ScanFragment : Fragment() {
     private var _binding: FragmentScanBinding? = null
     private val binding get() = _binding!!
+    private val viewModel by viewModels<ScanViewModel> {
+        ViewModelFactory.getInstance(requireContext())
+    }
 
     private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
     private var imageCapture: ImageCapture? = null
@@ -147,17 +156,29 @@ class ScanFragment : Fragment() {
             ContextCompat.getMainExecutor(requireContext()),
             object : ImageCapture.OnImageSavedCallback {
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-//                    val intent = Intent()
-//                    intent.putExtra(EXTRA_CAMERAX_IMAGE, output.savedUri.toString())
-//                    setResult(CAMERAX_RESULT, intent)
-//                    finish()
                     Log.d(TAG, "onImageSaved: ${output.savedUri}")
+                    viewModel.predict(photoFile).observe(viewLifecycleOwner) { result ->
+                        when (result) {
+                            is ResultState.Loading -> {
+                                showLoading(true)
+                            }
 
-                    Toast.makeText(
-                        requireContext(),
-                        "Gambar berhasil diambil. ${photoFile.absolutePath}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                            is ResultState.Success -> {
+                                val intent = Intent(requireContext(), ResultActivity::class.java)
+                                intent.putExtra(EXTRA_PREDICT_DATA, result.data.data)
+                                startActivity(intent)
+//                                requireActivity().finish()
+                                showToast(result.data.message)
+                                showLoading(false)
+//                                finish()
+                            }
+
+                            is ResultState.Error -> {
+                                showToast(result.error)
+                                showLoading(false)
+                            }
+                        }
+                    }
                 }
 
                 override fun onError(exc: ImageCaptureException) {
@@ -212,5 +233,19 @@ class ScanFragment : Fragment() {
     private fun createCustomTempFile(context: Context): File {
         val filesDir = context.externalCacheDir
         return File.createTempFile(timeStamp, ".jpg", filesDir)
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun showLoading(state: Boolean) {
+        if (state) {
+            binding.pbScan.visibility = View.VISIBLE
+            binding.overlayView.visibility = View.VISIBLE
+        } else {
+            binding.pbScan.visibility = View.GONE
+            binding.overlayView.visibility = View.GONE
+        }
     }
 }
