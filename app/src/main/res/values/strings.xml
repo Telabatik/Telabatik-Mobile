@@ -30,8 +30,8 @@
     <string name="result_favorite">Favorite</string>
     <string name="result_deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod... </string>
     <string name="result_learnmore">Learn More</string>
-    <string name="result_name_placeholder">Batik XYZ</string>
-    <string name="result_from_placeholder">Batik from </string>
+    <string name="item_title_placeholder">Batik XYZ</string>
+    <string name="item_description_placeholder">Batik from ABC</string>
 
     <!--content deskripsion result-->
     <string name="back_button">back</string>

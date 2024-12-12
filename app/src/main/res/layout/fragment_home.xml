@@ -64,7 +64,7 @@
                 android:layout_height="50dp"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="0dp"
                 android:text="@string/scan_scaning"
                 android:textSize="16sp"
@@ -75,8 +75,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -109,8 +109,8 @@
                 style="@style/TextAppearance.Material3.TitleLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/home_otd_heading" />
 
             <com.google.android.material.card.MaterialCardView
@@ -126,7 +126,7 @@
 
                     <!-- Media -->
                     <ImageView
-                        android:id="@+id/iv_batik_result"
+                        android:id="@+id/iv_item_img"
                         android:layout_width="128dp"
                         android:layout_height="128dp"
                         android:contentDescription="@string/img_alt_batik"
@@ -134,7 +134,7 @@
                         app:srcCompat="@drawable/ic_placeholder" />
 
                     <LinearLayout
-                        android:id="@+id/ll_batik_info"
+                        android:id="@+id/ll_item"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
@@ -143,19 +143,19 @@
 
                         <!-- Title, secondary and supporting text -->
                         <TextView
-                            android:id="@+id/tv_batik_title"
+                            android:id="@+id/tv_item_title"
                             style="@style/TextAppearance.Material3.TitleLarge"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/result_name_placeholder" />
+                            android:text="@string/item_title_placeholder" />
 
                         <TextView
-                            android:id="@+id/tv_batik_description"
+                            android:id="@+id/tv_item_description"
                             style="@style/TextAppearance.Material3.BodyMedium"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="@string/result_from_placeholder" />
+                            android:text="@string/item_description_placeholder" />
 
                     </LinearLayout>
 
@@ -168,9 +168,9 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
 
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="8dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -201,9 +201,9 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
 
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="8dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 

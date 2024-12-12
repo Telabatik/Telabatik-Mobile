@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_scan, R.id.nav_reference
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 }
 

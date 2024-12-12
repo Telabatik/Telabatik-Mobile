@@ -8,10 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.telabatik.R
+import com.dicoding.telabatik.data.model.ScanResult
 import com.dicoding.telabatik.databinding.FragmentHomeBinding
+import java.util.Calendar
+import java.util.Date
 
 
 class HomeFragment : Fragment() {
@@ -45,6 +48,19 @@ class HomeFragment : Fragment() {
         // Menampilkan tombol navigasi (icon back) jika perlu
         activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         activity.supportActionBar?.title = "Telabatik"
+
+        binding.rvHistory.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+
+        val historyAdapter = HistoryAdapter()
+
+        val scanResults = mutableListOf<ScanResult>()
+        for (i in 1..5) {
+            val date: Date = Calendar.getInstance().time
+            scanResults.add(ScanResult(i, "Batik $i", date))
+        }
+        historyAdapter.submitList(scanResults)
+
+        binding.rvHistory.adapter = historyAdapter
 
 
     }

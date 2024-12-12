@@ -144,6 +144,13 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginHorizontal="10dp" />
 
+    <com.dicoding.telabatik.view.components.HorizontalReferenceItem
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="@string/item_title_placeholder"
+        app:descriptionText="@string/item_description_placeholder"
+        />
+
     <!-- Description Section -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_batik_info"
@@ -160,7 +167,7 @@
 
         <!-- Image View -->
         <ImageView
-            android:id="@+id/iv_batik_result"
+            android:id="@+id/iv_item_img"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
@@ -173,32 +180,32 @@
 
         <!-- Text Group -->
         <LinearLayout
-            android:id="@+id/ll_batik_info"
+            android:id="@+id/ll_item"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintStart_toEndOf="@id/iv_batik_result"
-            app:layout_constraintTop_toTopOf="@id/iv_batik_result"
-            app:layout_constraintBottom_toBottomOf="@id/iv_batik_result"
+            app:layout_constraintStart_toEndOf="@id/iv_item_img"
+            app:layout_constraintTop_toTopOf="@id/iv_item_img"
+            app:layout_constraintBottom_toBottomOf="@id/iv_item_img"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginStart="15dp">
 
             <!-- Batik Title -->
             <TextView
-                android:id="@+id/tv_batik_title"
+                android:id="@+id/tv_item_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/result_name_placeholder"
+                android:text="@string/item_title_placeholder"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"/>
 
             <!-- Batik Description -->
             <TextView
-                android:id="@+id/tv_batik_description"
+                android:id="@+id/tv_item_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/result_from_placeholder"
+                android:text="@string/item_description_placeholder"
                 android:textSize="14sp"
                 android:textColor="@color/black"
                 android:layout_marginTop="4dp" />
