@@ -64,7 +64,7 @@
                     style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/home_info" />
+                    android:text="@string/home_info_heading" />
 
                 <ImageButton
                     android:id="@+id/btn_batikinfo_title"

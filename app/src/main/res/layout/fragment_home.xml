@@ -95,7 +95,7 @@
                     style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/home_history" />
+                    android:text="@string/home_history_heading" />
 
                 <ImageButton
                     android:id="@+id/btn_history_title"
@@ -189,7 +189,7 @@
                     style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/home_recommend" />
+                    android:text="@string/home_recommendation_heading" />
 
                 <ImageButton
                     android:id="@+id/btn_yourlike_title"
@@ -222,7 +222,7 @@
                     style="@style/TextAppearance.Material3.TitleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/home_info" />
+                    android:text="@string/home_info_heading" />
 
                 <ImageButton
                     android:id="@+id/btn_batikinfo_title"

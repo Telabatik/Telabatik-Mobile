@@ -16,10 +16,10 @@
     <string name="home_hello">Hello, John Doe</string>
     <string name="home_welcome">Welcome!</string>
     <string name="home_history_time">history time</string>
-    <string name="home_history">Histori</string>
+    <string name="home_history_heading">Histori</string>
     <string name="home_otd_heading">Batik of the Day</string>
-    <string name="home_recommend">Anda mungkin suka</string>
-    <string name="home_info">Info Batik</string>
+    <string name="home_recommendation_heading">Anda mungkin suka</string>
+    <string name="home_info_heading">Info Batik</string>
 
     <string name="img_alt_batik">Batik Image</string>
 
@@ -51,5 +51,11 @@
     <string name="hello">Hello World!</string>
     <string name="content_description_more">More</string>
     <string name="more">More</string>
+    <string name="login_header">Masuk</string>
+    <string name="auth_username">Username</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_email">Email</string>
+    <string name="register_register">Daftar</string>
+    <string name="register_heading">Daftar</string>
 
 </resources>

@@ -45,7 +45,6 @@ dependencies {
 
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
-    val cameraxVersion = "1.3.0"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -56,20 +55,25 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation (libs.material)
-    implementation (libs.androidx.recyclerview)
-    implementation (libs.androidx.cardview)
+    implementation(libs.material)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.cardview)
 
+    implementation(libs.camerax)
+    implementation(libs.camerax.lifecycle)
+    implementation(libs.camerax.view)
 
-    //library CameraX
-    implementation("androidx.camera:camera-camera2:$cameraxVersion")
-    implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
-    implementation("androidx.camera:camera-view:$cameraxVersion")
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.lifecycle.viewmodel)
+    implementation(libs.androidx.lifecycle.livedata)
 
-    //Tambahkan Library TensorFlow Lite
-    implementation("com.google.android.gms:play-services-tflite-support:16.1.0")
-    implementation("com.google.android.gms:play-services-tflite-gpu:16.2.0")
-    implementation("org.tensorflow:tensorflow-lite-task-vision-play-services:0.4.2")
-    implementation("org.tensorflow:tensorflow-lite-gpu:2.9.0")
-    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    implementation(libs.glide)
 }
