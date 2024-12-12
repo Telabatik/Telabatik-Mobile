@@ -3,36 +3,60 @@ package com.dicoding.telabatik.ui.home
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.fragment.findNavController
 import com.dicoding.telabatik.R
+import com.dicoding.telabatik.databinding.FragmentHomeBinding
+
 
 class HomeFragment : Fragment() {
 
-    // Variabel RecyclerView
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var layoutManager: LinearLayoutManager
+    private lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflasi layout fragment
-        val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        // Inisialisasi RecyclerView setelah layout diinflasi
-        recyclerView = rootView.findViewById(R.id.rv_history)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // Inisialisasi LinearLayoutManager dengan orientasi horizontal
-        layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val btn_scan = view.findViewById<Button>(R.id.btn_scan)
 
-        // Set layoutManager untuk RecyclerView
-        recyclerView.layoutManager = layoutManager
+        // Menambahkan aksi klik pada tombol
+        btn_scan.setOnClickListener {
+            // Pindah ke ScanFragment menggunakan Navigation Component
+            findNavController().navigate(R.id.action_homeFragment_to_scanFragment)
+        }
+        
+        // Toolbar sebagai ActionBar di Fragment
+        val activity = activity as AppCompatActivity
+        val toolbar = binding.toolbar
+        activity.setSupportActionBar(toolbar)
 
-        // Anda bisa menambahkan adapter di sini jika perlu
+        // Menampilkan tombol navigasi (icon back) jika perlu
+        activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        activity.supportActionBar?.title = "Telabatik"
 
-        return rootView
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                // Menangani aksi tombol back (atau membuka profil)
+                findNavController().navigateUp()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
