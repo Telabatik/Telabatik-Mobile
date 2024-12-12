@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_reference -> {
                     loadFragment(ReferenceFragment())
                     true
-                }else -> false
+                } else -> false
             }
         }
 
