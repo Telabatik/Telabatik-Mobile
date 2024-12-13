@@ -1,16 +1,15 @@
 package com.dicoding.telabatik.ui
 
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.dicoding.telabatik.R
 import com.dicoding.telabatik.databinding.ActivityMainBinding
-import com.dicoding.telabatik.ui.home.HomeFragment
-import com.dicoding.telabatik.ui.reference.ReferenceFragment
-import com.dicoding.telabatik.ui.scan.ScanFragment
-
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,35 +20,24 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //nav color
         window.navigationBarColor = ContextCompat.getColor(this, R.color.white)
 
-        // Set default fragment
-        loadFragment(HomeFragment())
+        // Mengambil NavController dari NavHostFragment
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_view) as NavHostFragment
+        val navController = navHostFragment.navController
 
-        // BottomNavigationView Listener
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> {
-                    loadFragment(HomeFragment())
-                    true
-                }
-                R.id.nav_scan -> {
-                    loadFragment(ScanFragment())
-                    true
-                }
-                R.id.nav_reference -> {
-                    loadFragment(ReferenceFragment())
-                    true
-                }else -> false
-            }
-        }
+        // Mengambil BottomNavigationView dan menghubungkannya dengan NavController
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.setupWithNavController(navController)
 
-    }
-    // Function to replace fragments
-    private fun loadFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .commit()
+        // Konfigurasi untuk AppBar
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_home, R.id.nav_scan, R.id.nav_reference
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 }
+
+

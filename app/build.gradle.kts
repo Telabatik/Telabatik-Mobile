@@ -72,4 +72,7 @@ dependencies {
     implementation("org.tensorflow:tensorflow-lite-task-vision-play-services:0.4.2")
     implementation("org.tensorflow:tensorflow-lite-gpu:2.9.0")
     implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
+
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.4")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.7.4")
 }
