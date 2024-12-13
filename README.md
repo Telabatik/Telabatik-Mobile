@@ -1,4 +1,4 @@
-<img float="right" src="app/src/main/res/drawable/splash_logo.png" width="200">
+<img align="right" src="app/src/main/res/drawable/splash_logo.png" width="200">
 
 # Telabatik
 
