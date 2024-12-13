@@ -19,19 +19,19 @@
         android:theme="@style/Theme.Telabatik"
         tools:targetApi="31" >
         <activity
-            android:name=".view.settings.SettingsActivity"
+            android:name="dev.bangkit.telabatik.view.settings.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".view.result.ResultActivity"
+            android:name="dev.bangkit.telabatik.view.result.ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".view.result.BatikInfoActivity"
+            android:name="dev.bangkit.telabatik.view.result.BatikInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".view.welcome.WelcomeActivity"
+            android:name="dev.bangkit.telabatik.view.welcome.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".view.splash.SplashActivity"
+            android:name="dev.bangkit.telabatik.view.splash.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,13 +40,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.login.LoginActivity"
+            android:name="dev.bangkit.telabatik.view.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".view.register.RegisterActivity"
+            android:name="dev.bangkit.telabatik.view.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name="dev.bangkit.telabatik.ui.MainActivity"
             android:exported="false" />
     </application>
 

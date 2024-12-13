@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.dicoding.telabatik"
+    namespace = "dev.bangkit.telabatik"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.dicoding.telabatik"
+        applicationId = "dev.bangkit.telabatik"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

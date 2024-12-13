@@ -27,8 +27,6 @@
                 android:id="@+id/toptoolbar_home"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:menu="@menu/home_menu"
-                app:navigationIcon="@drawable/ic_profile"
                 app:title="@string/ref_home_title"></androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -74,14 +72,15 @@
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="@string/back_button"
                     android:src="@drawable/ic_next"
+                    android:visibility="gone"
                     app:tint="@color/black" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_batikinfo_ref"
+                android:id="@+id/rv_ref_batik_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="12dp"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
@@ -91,7 +90,8 @@
                 android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
 
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tv_batikproduk"
@@ -119,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:scrollbars="vertical"
+                android:visibility="gone"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <LinearLayout
@@ -127,7 +128,8 @@
                 android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
 
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tv_pusatpembelajaran_ref"
@@ -153,6 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:scrollbars="horizontal"
+                android:visibility="gone"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <LinearLayout
@@ -161,7 +164,8 @@
                 android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
 
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tv_berita_ref"
@@ -187,6 +191,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:scrollbars="horizontal"
+                android:visibility="gone"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
             <LinearLayout
@@ -195,7 +200,8 @@
                 android:layout_marginStart="16dp"
                 android:gravity="center_vertical"
 
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/tv_acara_ref"
@@ -221,6 +227,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:scrollbars="horizontal"
+                android:visibility="gone"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 

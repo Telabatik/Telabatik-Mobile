@@ -13,9 +13,9 @@
 
     <!--Home String-->
     <string name="telabatik">Telabatik</string>
-    <string name="home_hello">Hello, John Doe</string>
-    <string name="home_hello_name">Hello, %1$s</string>
-    <string name="home_welcome">Welcome!</string>
+    <string name="home_hello">Halo, John Doe</string>
+    <string name="home_hello_name">Halo, %1$s</string>
+    <string name="home_welcome">Selamat datang!</string>
     <string name="home_history_time">history time</string>
     <string name="home_history_heading">Histori</string>
     <string name="home_otd_heading">Batik of the Day</string>
@@ -26,10 +26,10 @@
 
     <!--result String/halaman result-->
     <string name="scan_scaning">Scan</string>
-    <string name="result_name">Name Batik Analisis</string>
-    <string name="result_history">History time analisis</string>
+    <string name="detail_name_placeholder">Batik XYZ</string>
+    <string name="detail_subtitle_placeholder">Batik dari Indonesia</string>
     <string name="result_favorite">Favorite</string>
-    <string name="result_deskripsi">Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod... </string>
+    <string name="detail_description_placeholder"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in odio non sapien tempor varius. Nunc ac vestibulum enim, a sagittis massa. Integer ultrices imperdiet ex ut dictum. Vivamus tincidunt vel risus ut fermentum. Pellentesque eget faucibus neque, vitae bibendum nibh. Vivamus sed justo a arcu aliquam ultrices sed pellentesque dolor. Donec aliquam condimentum justo vulputate ultricies. Curabitur at dolor sit amet mauris elementum porta ac in eros. Curabitur quis ante pellentesque lacus posuere facilisis id sit amet quam. Donec et ante purus. Nam sed purus et tellus consequat elementum a non sem. Aenean lacinia lectus sodales felis blandit lacinia. Pellentesque leo purus, facilisis vitae finibus sit amet, egestas vel justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</string>
     <string name="result_learnmore">Pelajari lebih lanjut</string>
     <string name="item_title_placeholder">Batik XYZ</string>
     <string name="item_description_placeholder">Batik from ABC</string>
@@ -52,7 +52,7 @@
     <string name="hello">Hello World!</string>
     <string name="content_description_more">More</string>
     <string name="more">More</string>
-    <string name="login_header">Masuk</string>
+    <string name="login_heading">Masuk</string>
     <string name="auth_username">Username</string>
     <string name="auth_password">Password</string>
     <string name="auth_email">Email</string>
@@ -61,5 +61,8 @@
     <string name="settings_logout">Keluar</string>
     <string name="settings_header">Pengaturan</string>
     <string name="batik_info_heading">Info Batik</string>
+    <string name="app_tagline">Tradisi bertemu Teknologi</string>
+    <string name="batik_origin">Batik dari %1$s</string>
+    <string name="batik_info_description_placeholder">Ini adalah batik yang terdaftar di Telabatik. Sejarah dan makna akan tertera di sini.</string>
 
 </resources>

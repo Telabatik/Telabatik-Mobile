@@ -224,6 +224,7 @@
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="@string/back_button"
                     android:src="@drawable/ic_next"
+                    android:visibility="visible"
                     app:tint="@color/black" />
             </LinearLayout>
 

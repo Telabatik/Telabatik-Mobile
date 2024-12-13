@@ -43,28 +43,28 @@
                 android:src="@drawable/ic_placeholder" />
 
             <TextView
-                android:id="@+id/tv_batik_name2"
+                android:id="@+id/tv_result_name"
                 style="@style/TextAppearance.Material3.HeadlineSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/result_name" />
+                android:text="@string/detail_name_placeholder" />
 
             <TextView
-                android:id="@+id/tv_scan_time2"
+                android:id="@+id/tv_result_subtitle"
                 style="@style/TextAppearance.Material3.TitleMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/result_history"
+                android:text="@string/detail_subtitle_placeholder"
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/btn_settings_logout"
+                android:id="@+id/btn_result_favorite"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginHorizontal="16dp"
@@ -78,7 +78,7 @@
                 app:iconPadding="5dp" />
 
             <TextView
-                android:id="@+id/tv_result_deskripsion2"
+                android:id="@+id/tv_result_description"
                 style="@style/TextAppearance.Material3.BodyMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@string/result_deskripsi"
+                android:text="@string/detail_description_placeholder"
                 android:textSize="16sp" />
 
             <TextView
@@ -101,7 +101,7 @@
                 android:layout_marginBottom="8dp"
                 android:text="@string/result_learnmore" />
 
-            <com.dicoding.telabatik.view.components.HorizontalReferenceItem
+            <dev.bangkit.telabatik.view.components.HorizontalReferenceItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
